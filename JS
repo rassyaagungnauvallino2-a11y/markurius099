@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const navLinks = document.querySelectorAll(".nav-menu a");
+
+  // Fungsi untuk menandai link menu yang aktif
+  function activateLink() {
+    const sections = document.querySelectorAll("section");
+    let current = "";
+
+    // Tentukan bagian (section) mana yang sedang terlihat di viewport
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      // Cek jika posisi scroll lebih dari posisi section dikurangi 100px (untuk offset)
+      if (scrollY >= sectionTop - 100) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    // Hapus kelas 'active' dari semua link
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      // Tambahkan kelas 'active' pada link yang sesuai dengan ID section yang aktif
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  // Jalankan saat halaman di-scroll
+  window.addEventListener("scroll", activateLink);
+
+  // Jalankan saat halaman pertama kali dimuat
+  activateLink();
+});

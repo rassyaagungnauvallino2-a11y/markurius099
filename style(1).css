@@ -1,0 +1,164 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  display: flex; /* Menggunakan Flexbox untuk tata letak sidebar dan konten */
+}
+
+/* 1. SIDEBAR (Menu Samping Kiri) */
+.sidebar {
+  width: 250px; /* Lebar Sidebar */
+  background-color: #1a1a2e; /* Warna gelap untuk nuansa podcast */
+  color: white;
+  padding: 20px;
+  height: 100vh; /* Memastikan sidebar setinggi viewport */
+  position: fixed; /* Membuat menu tetap terlihat */
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Jika menu terlalu panjang */
+  z-index: 100;
+}
+
+.logo h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+  color: #e94560; /* Warna branding */
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-menu li a {
+  display: block;
+  color: #b9b8d9;
+  text-decoration: none;
+  padding: 12px 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #e94560;
+  color: white;
+}
+
+.nav-menu li a i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+/* 2. KONTEN UTAMA */
+.main-content {
+  margin-left: 250px; /* Offset margin agar konten tidak tertutup sidebar */
+  flex-grow: 1;
+}
+
+/* BAGIAN HERO (GAMBAR DEPAN) */
+.hero-section {
+  background-image: url("podcast-background.jpg"); /* GANTI dengan URL gambar podcast Anda */
+  background-size: cover;
+  background-position: center;
+  height: 500px; /* Tinggi banner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap agar teks terbaca */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #e94560;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #c5374e;
+}
+
+/* BAGIAN EPISODE */
+.episode-section,
+.other-section {
+  padding: 40px 60px;
+}
+
+.episode-section h2,
+.other-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1a1a2e;
+}
+
+.episode-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.episode-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 15px;
+  text-align: center;
+}
+
+.episode-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.episode-card h3 {
+  color: #e94560;
+  margin-bottom: 5px;
+}
+
+.episode-card audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: 50px;
+}

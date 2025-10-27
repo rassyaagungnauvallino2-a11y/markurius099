@@ -1,0 +1,212 @@
+/* Atur font global, warna latar belakang gelap, dan warna teks terang */
+body {
+  background-color: #121212; /* Latar belakang sangat gelap */
+  color: #f0f0f0; /* Teks putih terang */
+  font-family: "Arial", sans-serif; /* Font sederhana */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* 1. HEADER (Navigasi Atas) */
+.main-header {
+  background-color: #1f1f1f; /* Sedikit lebih terang dari body */
+  padding: 15px 5%;
+  display: flex; /* Menggunakan Flexbox untuk tata letak sejajar */
+  justify-content: space-between; /* Memisahkan logo dan aksi pengguna */
+  align-items: center;
+  border-bottom: 2px solid #2e2e2e; /* Garis bawah elegan */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff9900; /* Warna aksen/logo */
+}
+
+.main-nav a {
+  color: #cccccc;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ff9900; /* Efek hover */
+}
+
+.user-actions button {
+  background: none;
+  border: none;
+  color: #cccccc;
+  font-size: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* 2. HERO SECTION (Banner Utama) */
+.hero-section {
+  background-image: url("banner-bg.jpg"); /* Ganti dengan gambar latar Anda */
+  background-size: cover;
+  background-position: center;
+  height: 400px; /* Tinggi banner */
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Latar belakang transparan untuk teks */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Tombol Aksi */
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #ff9900; /* Warna aksen */
+  color: #121212;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #ff9900;
+  color: #ff9900;
+}
+
+.btn-secondary:hover {
+  background-color: #ff9900;
+  color: #121212;
+}
+
+/* 4. PRODUCT SHOWCASE (Daftar Produk) */
+.product-showcase {
+  padding: 20px 5%;
+}
+
+.product-showcase h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.product-grid {
+  display: flex; /* Menggunakan Flexbox untuk tata letak grid produk */
+  flex-wrap: wrap; /* Agar produk bisa turun baris */
+  gap: 20px; /* Jarak antar produk */
+  justify-content: center; /* Produk berada di tengah */
+}
+
+.product-card {
+  background-color: #1f1f1f;
+  border: 1px solid #333333;
+  padding: 15px;
+  width: 280px; /* Lebar setiap kartu produk */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Efek mengangkat saat di-hover */
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.product-brand {
+  color: #aaaaaa;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  font-size: 20px;
+  color: #ff9900;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-add-cart {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-add-cart:hover {
+  background-color: #0056b3;
+}
+
+/* 5. PARTNER BRANDS */
+.partner-brands {
+  text-align: center;
+  padding: 40px 5%;
+  border-top: 2px solid #2e2e2e;
+}
+
+.logo-list img {
+  width: 80px; /* Ukuran logo */
+  height: auto;
+  margin: 0 20px;
+  filter: grayscale(100%) opacity(0.7); /* Efek grayscale seperti contoh */
+  transition: filter 0.3s;
+}
+
+.logo-list img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
+/* 6. FOOTER */
+.main-footer {
+  background-color: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+/* Catatan: Anda perlu membuat folder 'images' dan menempatkan gambar (sepatu1.jpg, banner-bg.jpg, dll.) di dalamnya, atau menyesuaikan path gambar! */
